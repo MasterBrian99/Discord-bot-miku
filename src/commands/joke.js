@@ -1,6 +1,3 @@
-//https://official-joke-api.appspot.com/jokes/random
-
-
 const oneLinerJoke = require('one-liner-joke');
 const Utils = require('../util/util');
 
@@ -14,14 +11,14 @@ module.exports = {
         try {
 
             const getRandomJoke = oneLinerJoke.getRandomJoke();
-            console.log(getRandomJoke)
             return message.channel.send(getJoke(getRandomJoke));
 
 
 
         } catch (error) {
-            console.log(error);
-
+            return message.channel.send(
+                `Something wrong.please try again. ${message.author}`
+            );
 
         }
 

@@ -7,16 +7,14 @@ const Utils = require('../util/util');
 
 module.exports = {
     name: 'quote',
-    //  cooldown: 5,
+    cooldown: 5,
     description: 'Get random quote',
     execute(message) {
-        //var res = args.split(' ');
 
         getQuote(message);
 
 
 
-        //  message.channel.send(`Arguments: ${args}\nArguments length: ${args.length}`);
     },
 };
 
@@ -25,10 +23,8 @@ module.exports = {
 
 
 const getQuote = async (message) => {
-    //
     try {
         const response = await axios.get(process.env.QUOTE_API);
-        // console.log(response);
         if (response.status == 200) {
 
             return message.channel.send(createEmbed(response.data));
@@ -36,7 +32,6 @@ const getQuote = async (message) => {
 
 
     } catch (error) {
-        //  console.log(error);
         return message.channel.send(
             `Something wrong.please try again. ${message.author}`
         );

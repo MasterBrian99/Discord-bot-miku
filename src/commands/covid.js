@@ -10,14 +10,12 @@ module.exports = {
     cooldown: 5,
     description: 'Get Information about Covid situation.',
     execute(message, args) {
-        //var res = args.split(' ');
         if (!args.length) {
             return message.channel.send(
                 `You didn't provide any country, ${message.author}!`
             );
         }
-        //  console.log(Object.values(args));
-        //    console.log(args.toString().replace(/,/g, ' ').replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase()));
+
 
         const country = args.toString().replace(/,/g, ' ').replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
 
@@ -25,12 +23,6 @@ module.exports = {
 
 
 
-        //charAt(0).toUpperCase() + string.slice(1).toLowerCase()
-
-
-        //getUser(message, args);
-
-        //  message.channel.send(`Arguments: ${args}\nArguments length: ${args.length}`);
     },
 };
 
@@ -39,21 +31,19 @@ const getInfo = async (message, country) => {
 
     try {
         const response = await axios.get(process.env.COVID_API + country)
-        //    console.log(response.data);
 
         if (response.status !== 200 || response.data.All == null) {
 
             return message.channel.send('Sorry');
 
-            //       console.log('Sorry');
         }
-        //return message.channel.send('good');
 
-        // console.log('good');
         return message.channel.send(covidResponse(response.data));
 
     } catch (error) {
-        console.log(error);
+        return message.channel.send(
+            `Something wrong.please try again. ${message.author}`
+        );
     }
 
 };
@@ -99,7 +89,3 @@ const covidResponse = (data) => {
         embed: exampleEmbed
     });
 };
-
-/**
- * My icons collection
- */

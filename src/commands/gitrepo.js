@@ -6,14 +6,13 @@ const Utils = require('../util/util');
 
 module.exports = {
     name: 'gitrepo',
-    //   cooldown: 5,
+    cooldown: 5,
     description: 'Get Information about github repositories.',
     execute(message, args) {
         if (!args.length) {
             return message.channel.send(`You didn't provide any arguments, ${message.author}!`);
 
         }
-        //    console.log(args[0]);
         getREpo(message, args)
 
 
@@ -23,7 +22,6 @@ module.exports = {
 const getREpo = async (message, args) => {
     try {
         const response = await axios.get(process.env.GITHUB_API + 'repos/' + args[0]);
-        // console.log(response);
         if (response.status == 200) {
 
             return message.channel.send(createEmbed(response));
@@ -31,7 +29,6 @@ const getREpo = async (message, args) => {
 
 
     } catch (error) {
-        //      console.log(error);
         return message.channel.send(
             `Repository not found.try another repository ${message.author}`
         );
