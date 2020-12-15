@@ -1,3 +1,7 @@
+require('dotenv').config({
+    path: '../.env',
+});
+
 module.exports = {
     generateColor: () => {
         let letters = "0123456789ABCDEF";
@@ -21,5 +25,6 @@ module.exports = {
         }
         return repoSizeOriginal;
 
-    }
+    },
+
 };
