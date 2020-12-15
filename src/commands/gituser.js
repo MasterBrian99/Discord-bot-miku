@@ -3,7 +3,7 @@ const axios = require('axios');
 require('dotenv').config({
     path: '../.env'
 });
-const Handlers = require('../handlers/handle');
+const Utils = require('../util/util');
 
 module.exports = {
     name: 'gituser',
@@ -42,7 +42,7 @@ const getUser = async (message, args) => {
 const createEmbed = (response) => {
     const data = response.data;
     const userEmbed = new Discord.MessageEmbed()
-        .setColor(Handlers.generateColor())
+        .setColor(Utils.generateColor())
         .setTitle(data.login)
         .setURL(data.html_url)
         .setThumbnail(data.avatar_url)

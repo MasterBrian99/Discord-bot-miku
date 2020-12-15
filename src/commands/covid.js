@@ -2,18 +2,18 @@ const axios = require('axios');
 require('dotenv').config({
     path: '../.env',
 });
-const Handlers = require('../handlers/handle');
+const Utils = require('../util/util');
 
 
 module.exports = {
     name: 'covid',
     cooldown: 5,
-    description: 'Get Information about github profiles.',
+    description: 'Get Information about Covid situation.',
     execute(message, args) {
         //var res = args.split(' ');
         if (!args.length) {
             return message.channel.send(
-                `You didn't provide any arguments, ${message.author}!`
+                `You didn't provide any country, ${message.author}!`
             );
         }
         //  console.log(Object.values(args));
@@ -62,7 +62,7 @@ const getInfo = async (message, country) => {
 const covidResponse = (data) => {
 
     const exampleEmbed = {
-        color: Handlers.generateColor(),
+        color: Utils.generateColor(),
         title: data.All.country,
         author: {
             name: 'COVID-19 Situation Report',

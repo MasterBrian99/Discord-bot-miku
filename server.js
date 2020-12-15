@@ -1,15 +1,18 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-require("dotenv").config({ path: "./src/.env" });
+require("dotenv").config({
+  path: "./src/.env"
+});
 client.login(process.env.BOT_TOKEN);
 const fs = require("fs");
 client.commands = new Discord.Collection();
-const { prefix, token } = require("./config.json");
+const {
+  prefix
+} = require("./config.json");
 const commandFiles = fs
   .readdirSync("./src/commands")
   .filter((file) => file.endsWith(".js"));
 const cooldowns = new Discord.Collection();
-const Handlers = require("./src/handlers/handle");
 
 for (const file of commandFiles) {
   const command = require(`./src/commands/${file}`);
@@ -17,6 +20,7 @@ for (const file of commandFiles) {
 }
 
 client.once("ready", () => {
+
   console.log("Ready!");
 });
 
@@ -60,3 +64,12 @@ client.on("message", (message) => {
   }
   // do the same for the rest of the commands...
 });
+
+/*
+TO DO
+
+joke
+quote 
+
+
+*/

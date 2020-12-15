@@ -2,7 +2,7 @@ const axios = require('axios');
 require('dotenv').config({
     path: '../.env',
 });
-const Handlers = require('../handlers/handle');
+const Utils = require('../util/util');
 
 module.exports = {
     name: 'gitrepo',
@@ -46,7 +46,7 @@ const createEmbed = (response) => {
     const data = response.data;
 
     const repoEmbed = {
-        color: Handlers.generateColor(),
+        color: Utils.generateColor(),
         title: data.name,
         url: data.html_url,
 
@@ -56,7 +56,7 @@ const createEmbed = (response) => {
         },
         fields: [{
                 name: ' Repository Size',
-                value: Handlers.repoSize(data.size),
+                value: Utils.repoSize(data.size),
                 inline: true,
 
             },
