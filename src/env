@@ -1,0 +1,13 @@
+BOT_TOKEN= #add your token 
+
+GITHUB_API=https://api.github.com/
+
+COVID_API=https://covid-api.mmediagroup.fr/v1/cases?country=
+
+QUOTE_API=https://zenquotes.io/api/random
+
+
+
+
+
+
