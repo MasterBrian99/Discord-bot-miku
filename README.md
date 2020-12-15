@@ -1,7 +1,7 @@
 # Miku- Discord bot
 ### Simple Discord bot using [Discord.js](https://discord.js.org/#/) module and [Discordjs Guide](https://discordjs.guide/).
 
-![Brian](https://img.shields.io/david/dev/MasterBrian99/Discord-bot-miku) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/MasterBrian99/Discord-bot-miku) ![GitHub issues](https://img.shields.io/github/issues/MasterBrian99/Discord-bot-miku?style=plastic) ![GitHub](https://img.shields.io/github/license/MasterBrian99/Discord-bot-miku) [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://github.com/MasterBrian99) [![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://github.com/MasterBrian99/Discord-bot-miku/releases/) [![Open Source Love ](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/MasterBrian99) [![Awesome Badges](https://img.shields.io/badge/badges-awesome-green.svg)](https://github.com/MasterBrian99)
+![Brian](https://img.shields.io/david/dev/MasterBrian99/Discord-bot-miku) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/MasterBrian99/Discord-bot-miku) ![GitHub issues](https://img.shields.io/github/issues/MasterBrian99/Discord-bot-miku?style=plastic) ![GitHub](https://img.shields.io/github/license/MasterBrian99/Discord-bot-miku?style=plastic) [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://github.com/MasterBrian99)  [![Open Source Love ](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/MasterBrian99) [![Awesome Badges](https://img.shields.io/badge/badges-awesome-green.svg)](https://github.com/MasterBrian99)
 
 
 <p align="center">
