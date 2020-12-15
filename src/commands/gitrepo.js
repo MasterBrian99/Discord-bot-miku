@@ -59,7 +59,7 @@ const createEmbed = (response) => {
             },
             {
                 name: 'Language',
-                value: data.language,
+                value: data.language ? data.language : 'none',
                 inline: true,
             },
             {
